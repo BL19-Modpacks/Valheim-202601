@@ -2,7 +2,7 @@
 
 Version: 1.0.0
 
-Website: https://github.com/BL19-Modpacks/Valheim-202502
+Website: https://github.com/BL19-Modpacks/Valheim-202601
 
 This is a Valheim modpack that I created for me and my friends and our playsession starting in January 2026.
 
