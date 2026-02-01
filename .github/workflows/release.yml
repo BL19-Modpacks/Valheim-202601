@@ -1,0 +1,44 @@
+name: Release Modpack
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read version from manifest.json
+        id: manifest
+        run: |
+          VERSION=$(jq -r '.version_number' manifest.json)
+          if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
+            echo "version_number missing in manifest.json" >&2
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Create release zip
+        run: |
+          ZIP_NAME="Valheim_BL_202601-${{ steps.manifest.outputs.version }}.zip"
+          zip -r "$ZIP_NAME" manifest.json README.md icon.png
+          echo "zip_name=$ZIP_NAME" >> "$GITHUB_ENV"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.manifest.outputs.version }}
+          name: Valheim_BL_202601 v${{ steps.manifest.outputs.version }}
+          files: ${{ env.zip_name }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
