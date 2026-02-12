@@ -1,6 +1,6 @@
 # Valheim_BL_202601
 
-Version: 1.0.0
+Version: 1.0.1
 
 Website: https://github.com/BL19-Modpacks/Valheim-202601
 
@@ -15,4 +15,4 @@ This is a Valheim modpack that I created for me and my friends and our playsessi
 | [AzuCraftyBoxes](https://thunderstore.io/c/valheim/p/Azumatt/AzuCraftyBoxes/)                 | Azumatt-AzuCraftyBoxes-1.8.12           | Mod                |
 | [MultiUserChest](https://thunderstore.io/c/valheim/p/MSchmoecker/MultiUserChest/)             | MSchmoecker-MultiUserChest-0.6.1        | Mod                |
 | [ItemDrawers](https://thunderstore.io/c/valheim/p/KGvalheim/ItemDrawers/)                     | KGvalheim-ItemDrawers-1.2.0             | Mod                |
-| [CraftyCartsRemake](https://thunderstore.io/c/valheim/p/OdinPlus/CraftyCartsRemake/)          | OdinPlus-CraftyCartsRemake-3.1.11       | Mod                |
+| [CraftyCartsRemake](https://thunderstore.io/c/valheim/p/OdinPlus/CraftyCartsRemake/)          | OdinPlus-CraftyCartsRemake-3.1.12       | Mod                |
